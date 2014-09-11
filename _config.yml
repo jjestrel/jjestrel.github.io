@@ -1,0 +1,32 @@
+# visit https://github.com/mojombo/jekyll/wiki/Configuration for more settings
+
+paginate: 10 # pagination based on number of posts
+paginate_path: "page:num"
+exclude: ["README.md"] # files to exclude
+highlighter: true
+markdown: kramdown
+
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      title: dbyll
+
+description: Stylish Jekyll Theme
+author:
+  name: Jay Estrella
+  email: jjestrel@uwaterloo.ca
+  github: genericjay
+  #twitter: dbtek
+  #pinterest: asd123
+  linkedin: jonathanestrella
+  bio: I like to take things apart and see how they work.
+  email_md5: 1cc8126ecaa1ac61f78a57856f83a4c0
+
+rss_path: feed.xml
+categories_path: categories.html
+tags_path: tags.html
+
+BASE_PATH:
