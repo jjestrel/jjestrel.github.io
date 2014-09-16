@@ -12,13 +12,13 @@ defaults:
     scope:
       path: "" # empty string for all files
     values:
-      title: dbyll
+      title: Jonathan Estrella
 
-description: Stylish Jekyll Theme
+description: 
 author:
-  name: Jay Estrella
+  name: Jonathan Estrella
   email: jjestrel@uwaterloo.ca
-  github: genericjay
+  github: jjestrel
   #twitter: dbtek
   #pinterest: asd123
   linkedin: jonathanestrella
