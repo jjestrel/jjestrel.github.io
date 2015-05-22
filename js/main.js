@@ -18,13 +18,18 @@ $(document).on({
 // Setup for loading new pages
 $(".item").click(function() {
   var postUrl = $(this).data('post');
-  $.get(postUrl, {}, function(data) {
+  $.get("http://localhost:2833/personal/" + postUrl, {}, function(data) {
     savedScroll = $(window).scrollTop();
     console.log("Saving scroll pos: " + savedScroll);
 
     $("#home").hide();
     $("#post-content").html(data);
     $("#post").show();
+
+    // Come back to the top of the page
+    window.scrollTo(0, 0);
+
+    console.log("Showing (", postUrl, "): ", data);
   });
 });
 
@@ -38,7 +43,8 @@ $("#back-btn").click(function() {
   console.log("Scrolling to: " + savedScroll);
   $(window).scrollTop(savedScroll);
 
-  stopLoad();
+  // Artificial load time, since things look like they're too fast
+  setTimeout(stopLoad, 500);
 });
 
 // Image's need to be autosized (Credits: Mariel Yonnadam for this part)

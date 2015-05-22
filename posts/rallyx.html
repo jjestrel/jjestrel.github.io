@@ -1,0 +1,44 @@
+
+<div class="main" style="height: 20vh;">
+  <div class="mainOverlay" style="height:15vh;"></div>
+  <div class="" style="height: 15vh; top:33%; position: relative; transform: translateY(-12.5%); text-align: center;">
+    <h3><strong>Jonathan Estrella</strong></h3>
+  </div>
+</div>
+
+<div class="post-content">
+  <h3 style="text-align:center;"><strong>Rally-X Reverse Engineering</strong></h3>
+  <div class="post-content-text">
+    <h3><strong>Inspiration</strong></h3>
+    <p>
+      At my last workplace, the Manulife RED Lab, we had an arcade machine. It was probably powered by android and running an emulator or something along those lines.
+      I got into a friendly competition with one of my coworkers where we fiercely competed for the highscore of Rally-X. A simple car racing game where they collect flags
+      and avoid other cars. It got to the point where the high score was unable to be beaten after a few weeks of attempts. The next logical step was to try to write
+      a bot to play the game in order to beat the unbeatable high score.
+    </p>
+    <h3><strong>Background</strong></h3>
+    <p>
+      Rally-X is a Namco arcade game about avoiding cars and collecting flags. You start with 3 lives, and at 40,000 points you get one extra life. There is one special
+      flag that makes all points on subsequent flags doubled (the special flag itself gets double points). One you collect all 10 flags in a level the remainder of your fuel
+      is added to your points. It is likely 1 "unit" of fuel is 1 point however fuel is represented graphically so we must access the game's memory to see. There is one way to stop
+      cars, using button 1 you leave a 3 tile size smoke trail as you drive at the cost of 1 "tick" of fuel. As levels progress enemy cars become faster. There is a bonus round after
+      the first 2 levels, then every 3 levels after that.
+    </p>
+    <h3><strong>Goals</strong></h3>
+    <p>
+      The ultimate goal is to be able to create an automated Rally-X playing program. Due to the intricacies and sometimes glitchy behaviour of the game attempting to recreate it
+      and putting the AI into the rewritten game would be simpler but would lead to inaccurate score outputs and results. The other possibility is to use MAME to access key memory
+      inside of the game (remaining lives, direction, positions, map obstacles, flags) and make calls to functions inside of the game's memory that correspond to joystick input.
+    </p>
+    <h3><strong>Plan of Attack</strong></h3>
+    <p>
+      <ul>
+        <li>Find addresses corresponding to health, direction, and positions of map items</li>
+        <li>Determine the address what gets called for each controller input</li>
+        <li>Create a fitness function with parameters: level, score, and the number of flags grabbed before the special flag</li>
+        <li>Create bots that choose to press a direction or spray a smoke trail based on the parameters: available directions, fuel, score, level, "true" distance from nearest car</li>
+      </ul>
+    </p>
+  </div>
+
+</div>
