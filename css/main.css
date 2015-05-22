@@ -1,3 +1,8 @@
+
+body {
+  margin-bottom: 100px;
+}
+
 .mainOverlay {
   background-color: black;
   opacity: 0.85;
@@ -85,6 +90,7 @@
   opacity: 0.75;
   border-radius: 4px;
 }
+
 
 /** Loading Stuff **/
 /* Start by setting display:none to make this hidden.
