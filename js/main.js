@@ -20,6 +20,7 @@ $(".item").click(function() {
   var postUrl = $(this).data('post');
   $.get(postUrl, {}, function(data) {
     savedScroll = $(window).scrollTop();
+    console.log("Saving scroll pos: " + savedScroll);
 
     $("#home").hide();
     $("#post-content").html(data);
@@ -34,6 +35,7 @@ $("#back-btn").click(function() {
   $("#post").hide();
   $("#home").show();
 
+  console.log("Scrolling to: " + savedScroll);
   $(window).scrollTop(savedScroll);
 
   stopLoad();
