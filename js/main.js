@@ -1,15 +1,26 @@
 // Setup for loading spinner
 $body = $("body");
+var savedScroll = null;
+
+var startLoad = function() {
+  $body.addClass("loading");
+};
+
+var stopLoad = function() {
+  $body.removeClass("loading");
+};
 
 $(document).on({
-    ajaxStart: function() { $body.addClass("loading");    },
-    ajaxStop: function() { $body.removeClass("loading"); }
+    ajaxStart: startLoad,
+    ajaxStop: stopLoad
 });
 
 // Setup for loading new pages
 $(".item").click(function() {
   var postUrl = $(this).data('post');
   $.get(postUrl, {}, function(data) {
+    savedScroll = $(window).scrollTop();
+
     $("#home").hide();
     $("#post-content").html(data);
     $("#post").show();
@@ -17,9 +28,15 @@ $(".item").click(function() {
 });
 
 $("#back-btn").click(function() {
+  startLoad();
+
   $("#post-content").html("");
   $("#post").hide();
   $("#home").show();
+
+  $(window).scrollTop(savedScroll);
+
+  stopLoad();
 });
 
 // Image's need to be autosized (Credits: Mariel Yonnadam for this part)
