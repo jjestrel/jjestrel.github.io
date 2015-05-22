@@ -12,7 +12,7 @@ $(".item").click(function() {
   $.get(postUrl, {}, function(data) {
     $("#home").hide();
     $("#post-content").html(data);
-    $("#post".show());
+    $("#post").show();
   });
 });
 
