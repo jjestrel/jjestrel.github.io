@@ -27,7 +27,7 @@ $(".item").click(function() {
 $(".scroll-label").click(function() {
     $('html, body').animate({
         scrollTop: $("#projects").offset().top
-    }, 2000);
+    }, 500);
 });
 
 // Image's need to be autosized (Credits: Mariel Yonnadam for this part)
