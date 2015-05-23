@@ -31,7 +31,7 @@
 <body>
   <div class="main" style="height: 20vh;">
     <div class="mainOverlay" style="height:15vh;"></div>
-    <a href="/" style="text-decoration:none;"><span style="position: absolute; top: 5%; font-size: 1.5em;left: 20px;">&#8592; Back</span></a>
+    <span id="back-btn" style="position: absolute; top: 5%; font-size: 1.5em;left: 20px;">&#8592; Back</span>
     <div style="height: 15vh; top:33%; position: relative; transform: translateY(-12.5%); text-align: center;">
       <h3><strong>Jonathan Estrella</strong></h3>
     </div>
@@ -87,7 +87,7 @@
             wpset 0x800F,1,w
           </code>
           <br/>
-          And it does get lowered by one for every time we die, and gets written to twice after we die on our last life.
+          And it does get lowered by one for every time we die, and gets written to twice after we die on our last life. This means we found our first useful variable!
         </p>
       </p>
 
@@ -102,4 +102,9 @@
 </body>
 
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+  $("#back-btn").click(function() {
+    window.open("/");
+  });
+</script>
 </html>

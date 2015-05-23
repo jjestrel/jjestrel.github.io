@@ -6,6 +6,7 @@ body {
 #back-btn {
   font-size: 4em;
   color: white;
+  cursor: pointer;
 }
 
 .post-content-text {

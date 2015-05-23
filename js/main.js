@@ -23,21 +23,6 @@ $(".item").click(function() {
   win.focus();
 });
 
-
-$("#back-btn").click(function() {
-  startLoad();
-
-  $("#post-content").html("");
-  $("#post").hide();
-  $("#home").show();
-
-  console.log("Scrolling to: " + savedScroll);
-  $(window).scrollTop(savedScroll);
-
-  // Artificial load time, since things look like they're too fast
-  setTimeout(stopLoad, 500);
-});
-
 // Image's need to be autosized (Credits: Mariel Yonnadam for this part)
 $(".item").height($(".item").width());
 
