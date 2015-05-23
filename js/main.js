@@ -16,22 +16,13 @@ $(document).on({
 });
 
 // Setup for loading new pages
+
 $(".item").click(function() {
   var postUrl = $(this).data('post');
-  $.get("http://localhost:2833/personal/" + postUrl, {}, function(data) {
-    savedScroll = $(window).scrollTop();
-    console.log("Saving scroll pos: " + savedScroll);
-
-    $("#home").hide();
-    $("#post-content").html(data);
-    $("#post").show();
-
-    // Come back to the top of the page
-    window.scrollTo(0, 0);
-
-    console.log("Showing (", postUrl, "): ", data);
-  });
+  var win = window.open(postUrl, '_blank');
+  win.focus();
 });
+
 
 $("#back-btn").click(function() {
   startLoad();
