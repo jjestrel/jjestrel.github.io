@@ -7,6 +7,7 @@ body {
   font-size: 4em;
   color: white;
   cursor: pointer;
+  z-index: 99;
 }
 
 .post-content-text {
