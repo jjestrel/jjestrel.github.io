@@ -10,6 +10,20 @@ body {
   z-index: 99;
 }
 
+#social {
+  font-size: 2.5em;
+}
+
+#social a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-btn {
+  margin: 10px;
+}
+
+
 .post-content-text {
   margin-left: 50px;
   margin-right: 100px;
@@ -34,7 +48,7 @@ body {
 
 .main .container {
   position: relative;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
 }
 
@@ -46,7 +60,7 @@ body {
   margin-top: 0;
 }
 
-.main .container .scrollLabel {
+.main .container .scroll-label {
   opacity: 0.6;
   padding-top: 5px;
 }

@@ -23,6 +23,13 @@ $(".item").click(function() {
   win.focus();
 });
 
+// Setup for scroll to projects
+$(".scroll-label").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#container").offset().top
+    }, 2000);
+});
+
 // Image's need to be autosized (Credits: Mariel Yonnadam for this part)
 $(".item").height($(".item").width());
 
