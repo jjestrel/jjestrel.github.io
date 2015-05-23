@@ -26,7 +26,7 @@ $(".item").click(function() {
 // Setup for scroll to projects
 $(".scroll-label").click(function() {
     $('html, body').animate({
-        scrollTop: $("#container").offset().top
+        scrollTop: $("#projects").offset().top
     }, 2000);
 });
 
