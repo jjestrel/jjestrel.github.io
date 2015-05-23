@@ -25,7 +25,7 @@ $(".item").click(function() {
 
 // Image's need to be autosized (Credits: Mariel Yonnadam for this part)
 $(".item").height($(".item").width());
-
+$(".itemOverlay").height($(".itemOverlay").width()); // Fix for weird CSS.
 
 $(".item").hover(
   function() {
