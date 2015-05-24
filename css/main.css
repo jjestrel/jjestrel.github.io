@@ -70,7 +70,7 @@
 }
 
 .button.button-primary {
-  background-color: #0069ff !important;
+  background-color: #007c00 !important;
   border: 0;
   line-height: 50px;
   height: 50px;
@@ -78,17 +78,17 @@
 }
 
 .button.button-primary:hover {
-  background-color: #3a8bff !important;
+  background-color: #007c00 !important;
   border: 0;
 }
 
 .button.button-primary:active {
-  background-color: #0069ff !important;
+  background-color: #007c00 !important;
   border: 0;
 }
 
 .button.button-primary:link {
-  background-color: #0069ff !important;
+  background-color: #007c00 !important;
   border: 0;
 }
 
