@@ -1,6 +1,7 @@
 
-body {
-  margin-bottom: 100px;
+.section-wrapper {
+  padding-bottom: 5%;
+  padding-top: 2%;
 }
 
 #back-btn {
