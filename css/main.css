@@ -20,6 +20,12 @@
   color: inherit;
 }
 
+#blog {
+  text-align: center;
+  line-height: 8rem;
+  font-size: 3rem;
+}
+
 .social-btn {
   margin: 10px;
 }
