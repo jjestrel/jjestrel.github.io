@@ -22,8 +22,12 @@
 
 #blog {
   text-align: center;
-  line-height: 8rem;
   font-size: 3rem;
+}
+
+.post-line {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .social-btn {
