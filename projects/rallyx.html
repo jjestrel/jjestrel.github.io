@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Jonathan Estrella</title>
+  <meta name="description" content="All about my software development exploits.">
+  <meta name="author" content="Jonathan Estrella">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/skeleton.css">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="/images/favicon.png">
+
+</head>
+<body>
+  <div class="main" style="height: 20vh;">
+    <div class="mainOverlay" style="height:15vh;"></div>
+    <!--
+      <span id="back-btn" style="position: absolute; top: 5%; font-size: 1.5em;left: 20px;">&#8592; Back</span>
+    -->
+    <div style="height: 15vh; top:33%; position: relative; transform: translateY(-12.5%); text-align: center;">
+      <h3><strong><a href="/" style="text-decoration: none; color:inherit;">Jonathan Estrella</a></strong></h3>
+    </div>
+  </div>
+
+  <div class="post-content">
+    <h3 style="text-align:center;"><strong>Rally-X Reverse Engineering</strong></h3>
+    <div class="post-content-text">
+      <h3><strong>Inspiration</strong></h3>
+      <p>
+        At my last workplace, the Manulife RED Lab, we had an arcade machine. It was probably powered by android and running an emulator or something along those lines.
+        I got into a friendly competition with one of my coworkers where we fiercely competed for the highscore of Rally-X. A simple car racing game where they collect flags
+        and avoid other cars. It got to the point where the high score was unable to be beaten after a few weeks of attempts. The next logical step was to try to write
+        a bot to play the game in order to beat the unbeatable high score.
+      </p>
+      <h3><strong>Background</strong></h3>
+      <p>
+        Rally-X is a Namco arcade game about avoiding cars and collecting flags. You start with 3 lives, and at 40,000 points you get one extra life. There is one special
+        flag that makes all points on subsequent flags doubled (the special flag itself gets double points). One you collect all 10 flags in a level the remainder of your fuel
+        is added to your points. It is likely 1 "unit" of fuel is 1 point however fuel is represented graphically so we must access the game's memory to see. There is one way to stop
+        cars, using button 1 you leave a 3 tile size smoke trail as you drive at the cost of 1 "tick" of fuel. As levels progress enemy cars become faster. There is a bonus round after
+        the first 2 levels, then every 3 levels after that.
+      </p>
+      <h3><strong>Goals</strong></h3>
+      <p>
+        The ultimate goal is to be able to create an automated Rally-X playing program. Due to the intricacies and sometimes glitchy behaviour of the game attempting to recreate it
+        and putting the AI into the rewritten game would be simpler but would lead to inaccurate score outputs and results. The other possibility is to use MAME to access key memory
+        inside of the game (remaining lives, direction, positions, map obstacles, flags) and make calls to functions inside of the game's memory that correspond to joystick input.
+      </p>
+      <h3><strong>Plan of Attack</strong></h3>
+      <p>
+        <ul>
+          <li>Find addresses corresponding to health, direction, and positions of map items</li>
+          <li>Determine the address what gets called for each controller input</li>
+          <li>Create a fitness function with parameters: level, score, and the number of flags grabbed before the special flag</li>
+          <li>Create bots that choose to press a direction or spray a smoke trail based on the parameters: available directions, fuel, score, level, "true" distance from nearest car</li>
+        </ul>
+      </p>
+
+      <h3><strong>Progress</strong></h3>
+      <p>
+        <h4>Finding The Lives Address</h4>
+        <p>
+          This is the simplest of the addresses to find. We will run MAME with the Rally-X ROM and take a stack. Immediately when the game starts, we pause it from MAME and run<br/>
+          <code>
+            dump lives0.txt, 0, 0xFFFF
+          </code>
+          <br/>
+          We repeat the process after having lost one life and now have two files. We run a diff against our two files and manually search through the diff seeing if there is a
+          value that changed from 4 (starting lives) to 3 (after one death). In the diff I'm providing I was going from 2 lives to 1 life. <br/>
+          We then set a watchpoint on that address to see if indeed every time we die it gets reduced by 1 <br/>
+          <code>
+            wpset 0x800F,1,w
+          </code>
+          <br/>
+          And it does get lowered by one for every time we die, and gets written to twice after we die on our last life. This means we found our first useful variable!
+        </p>
+      </p>
+
+      <h3><strong>CONTINUOUS UPDATES</strong></h3>
+      <p>
+        I could write 1000 blog posts about the fun I have playing with memory editors, unfortunately writing does take time and over time I'll update this post with more fun Rally-X
+        stuff and the progress I'm making on this. This is an ongoing project.
+      </p>
+    </div>
+
+  </div>
+</body>
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+</html>

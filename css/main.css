@@ -1,6 +1,47 @@
 
-body {
-  margin-bottom: 100px;
+.section-wrapper {
+  padding-bottom: 5%;
+  padding-top: 2%;
+}
+
+#back-btn {
+  font-size: 4em;
+  color: white;
+  cursor: pointer;
+  z-index: 99;
+}
+
+#social {
+  font-size: 2.5em;
+}
+
+#social a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#blog {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.post-line {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.social-btn {
+  margin: 10px;
+}
+
+.scroll-label {
+  cursor: pointer;
+}
+
+.post-content-text {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 20px;
 }
 
 .mainOverlay {
@@ -21,7 +62,7 @@ body {
 
 .main .container {
   position: relative;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
 }
 
@@ -33,13 +74,13 @@ body {
   margin-top: 0;
 }
 
-.main .container .scrollLabel {
+.main .container .scroll-label {
   opacity: 0.6;
   padding-top: 5px;
 }
 
 .button.button-primary {
-  background-color: #0069ff !important;
+  background-color: #007c00 !important;
   border: 0;
   line-height: 50px;
   height: 50px;
@@ -47,17 +88,17 @@ body {
 }
 
 .button.button-primary:hover {
-  background-color: #3a8bff !important;
+  background-color: #007c00 !important;
   border: 0;
 }
 
 .button.button-primary:active {
-  background-color: #0069ff !important;
+  background-color: #007c00 !important;
   border: 0;
 }
 
 .button.button-primary:link {
-  background-color: #0069ff !important;
+  background-color: #007c00 !important;
   border: 0;
 }
 
@@ -81,6 +122,7 @@ body {
   background-size: cover !important;
   margin-top: 5%;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .itemOverlay {

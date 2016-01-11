@@ -16,32 +16,22 @@ $(document).on({
 });
 
 // Setup for loading new pages
+
 $(".item").click(function() {
   var postUrl = $(this).data('post');
-  $.get(postUrl, {}, function(data) {
-    savedScroll = $(window).scrollTop();
-
-    $("#home").hide();
-    $("#post-content").html(data);
-    $("#post").show();
-  });
+  var win = window.open(postUrl, '_blank');
+  win.focus();
 });
 
-$("#back-btn").click(function() {
-  startLoad();
-
-  $("#post-content").html("");
-  $("#post").hide();
-  $("#home").show();
-
-  $(window).scrollTop(savedScroll);
-
-  stopLoad();
+// Setup for scroll to projects
+$(".scroll-label").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#recommendations").parent().offset().top
+    }, 500);
 });
 
 // Image's need to be autosized (Credits: Mariel Yonnadam for this part)
 $(".item").height($(".item").width());
-
 
 $(".item").hover(
   function() {
