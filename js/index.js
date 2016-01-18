@@ -85,7 +85,7 @@ var SKILLS = {
 	var getSkillHTML = function(name, image) {
 		var html = '		<div class="skill col s6 m4 l2 center-align">' +
 					'			<div class="image-wrapper">' +
-					'				<img src="' + image + '"/>' +
+					'				<img class="lazy" data-src="' + image + '"/>' +
 					'			</div>' +
 					'			<h4>' +
 					'				' + name +
@@ -104,6 +104,10 @@ var SKILLS = {
 			$('#' + skillLevel).append(html);
 		}
 	}
-
+	
+	
+	// Start lazy loading - we must do this at the end
+	$('.lazy').lazy();
+	
   }); // end of document ready
 })(jQuery); // end of jQuery name space

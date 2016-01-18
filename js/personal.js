@@ -86,7 +86,7 @@ var BOOKS = [
 	var getBookHTML = function(title, author, image) {
 		var html ='<div class="col s6 m5 l3">' +
 					'<div class="book center-align">' +
-						'<img src="'+ image + '"></img>' +
+						'<img class="lazy" data-src="'+ image + '"></img>' +
 						'<p class="center"><strong>' + title + '</strong><br/>'+ author + '</p>' +
 					'</div>' +
 				'</div>';
@@ -101,6 +101,9 @@ var BOOKS = [
 
 		$('#books-list').append(html);
 	}
+	
+	// Start lazy loading - we must do this at the end
+	$('.lazy').lazy();
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
