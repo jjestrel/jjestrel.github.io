@@ -1,157 +1,287 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    name="viewport">
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Jonathan Estrella</title>
-  <meta name="description" content="All about my software development exploits.">
-  <meta name="author" content="Jonathan Estrella">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,700,500' rel='stylesheet' type='text/css'>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
+    <title>Jonathan Estrella</title>
+	<!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/materialize.css" media="screen,projection" rel="stylesheet" type="text/css">
+    <link href="css/style.css" media="screen,projection" rel="stylesheet" type="text/css">
 </head>
+
 <body>
+    <nav class="light-blue darken-4 white-text">
+        <div class="nav-wrapper container">
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a data-href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a data-href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a data-href="#references">References</a>
+                </li>
+                <li>
+                    <a class="vertical-line" href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="personal.html">Personal</a>
+                </li>
+            </ul>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div id="home">
-    <div class="main">
-      <div class="mainOverlay"></div>
-      <div class="container">
-        <div class="row">
-          <div class="one-full column">
-            <h4>Hello,</h4>
-            <h3><strong>I'm Jonathan "Jay" Estrella</strong></h3>
-            <p>
-              I'm a software developer who uses programming as a tool to solve real problems.<br/>
-              I like thinking about interesting problems, taking apart programs, and cooking.<br/>
-              <br/>
-              I'm currently looking for an internship for Spring 2016
-              </p>
-            <a class="button button-primary" href="files/resume.pdf" target="_blank">Download Resume</a>
-            <div id="social">
-              <a href="https://github.com/jjestrel" target="_blank">
-                <i class="social-btn fa fa-github"></i>
-              </a>
-              <a href="https://ca.linkedin.com/in/jonathanestrella" target="_blank">
-                <i class="social-btn fa fa-linkedin-square"></i>
-              </a>
-            </div>
-          </div>
+            <ul class="side-nav" id="nav-mobile">
+                <li>
+                    <a data-href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a data-href="#skills">Skills</a>
+                </li>
+                <li>
+                    <a data-href="#references">References</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="personal.html">Personal</a>
+                </li>
+            </ul><a class="button-collapse material-icons" data-activates="nav-mobile" href="#" style="font-style: italic">menu</a>
         </div>
-        <div style="height:15vh;"></div>
-        <p class="scroll-label">Scroll down to learn more about me <i class="fa fa-angle-down"></i></p>
-      </div>
-    </div>
-    <!-- Start Recommendations Section -->
-    <div class="section-wrapper">
-      <div id="recommendations" class="container" >
-        <h2 style="font-size: 4rem; text-align: center;"><strong>What Do People Say?</strong></h2>
-        <!-- Ali's recommendation -->
-        <blockquote>
-          Jay is a technically talented individual with a impressively wide breadth of knowledge.
-          He was instrumental in supporting his teammates in achieving their goals and excelled on his own as well.
-          His skills and level-headed and well-informed perspective would be an asset to any team.
-          <br/><br/>
-          <p style="text-align: center;"><i>- Ali Tariq, Solutions Prototype Lead at Manulife RED Lab</i></p>
-        </blockquote>
+    </nav>
 
-        <br/>
+    <div class=
+    "section no-pad-bot transparent grey-text text-darken-2 valign-wrapper" id=
+    "index-banner">
+        <div class="container">
+            <div class="valign">
+                <h5 class="center">Hello,</h5>
 
-        <!-- Andrew's Recommendation -->
-        <blockquote>
-          Jay is an extremely intelligent, hardworking developer that knows what it takes to build production level software
-          with proper design. He has the strange ability to maintain great practices and write scalable code. When you find
-          someone who searches for innovative solutions and goes all the way home to implement it at the end of the day,
-          you know that he's going to be a hit in the industry.
-          I am definitely going to come to him next time I want to build another production level enterprise application in the future.
-          <br/><br/>
-          <p style="text-align: center;"><i>- Andrew Andrade, Co-founder at PetroPredict</i></p>
-        </blockquote>
+                <h3 class="header center">I'm Jonathan "Jay" Estrella</h3>
 
-        <br/>
+                <div class="row center">
+                    <p>
+						I'm a software developer who uses programming as a tool
+						to solve real problems.<br>
+						I like thinking about interesting problems, taking apart
+						programs, and cooking.
+					</p>
 
-        <!-- Daniel's Recommendation -->
-        <blockquote>
-          Jay is a capable programmer who can work well in groups or on his own to deliver production-ready code.
-          He makes himself available as deadlines close in and he is very easy to work with.
-          <br/><br/>
-          <p style="text-align: center;"><i>- Daniel Bernhard, Principal at db 3rd Sector Consultancy</i></p>
-        </blockquote>
-      </div>
-    </div>
-    <!-- End Recommendations Section -->
+                    <p>
+						I've interned at the <a href="https://www.manulife.ca">Manulife RED Lab</a>
+						prototyping
+						unique solutions for problems faced in the financial
+						industry<br>
+						and at <a href="http://watrhub.com/">WatrHub</a> creating
+						scalable tools to collect and process documents from
+						thousands of municipality websites.</p>
+                </div>
 
-    <!-- Start Projects Section -->
-    <div class="section-wrapper" style="background-color:#f8f8f8;">
-      <div id="projects" class="container">
-        <h2 style="text-align: center; margin-top: 50px; margin-bottom: -10px;"><strong>Projects</strong></h2>
-      	<div class="row">
-      	  <div class="four columns item" style="background:url(images/projects/rallyx.png);" data-post="projects/rallyx.html">
-    		    <div class="itemOverlay">
-              <div style="margin: 0 auto; font-weight: 700; font-size: 4em; color: #fff; text-align: center; line-height:300px;">Rally-X</div>
+				<div class="row center">
+					<p>
+						Email: <a href="mailto:jjestrel@uwaterloo.ca">jjestrel@uwaterloo.ca</a><br/>
+					</p>
+				</div>
+				<div class="row center-align contact-row">
+						<a href="https://github.com/jjestrel" target="_blank"><i class="fa fa-github-alt contact-icon" style="padding-right: 50px;"></i></a>
+						<a href="https://ca.linkedin.com/in/jonathanestrella" target="_blank"><i class="fa fa-linkedin-square contact-icon"></i></a>
+				</div>
+
+                <div class="row center">
+                    <a class="btn-large waves-effect waves-light blue darken-1"
+                    href="files/resume.pdf">Download Resume</a>
+                </div>
+
+				<div class="row center">
+					<p>
+						Looking for my blog? <a href="blog.html">Click here</a>.
+					</p>
+					<p>
+						Want to know what I do for fun? <a href="personal.html">Click here</a>.
+					</p>
+          <p>
+            Find my references <a data-href="#references">here</a>.
+          </p>
+				</div>
             </div>
-      	  </div>
-      	  <div class="four columns item" style="background:url(images/projects/sp500.jpg);" data-post="projects/sp500leverage.html">
-        		<div class="itemOverlay">
-              <div style="margin: 0 auto; font-weight: 700; font-size: 4em; color: #fff; text-align: center; line-height:70px; position:relative; top:75px;">S&amp;P 500 Sim</div>
-            </div>
-      	  </div>
-      	  <div class="four columns item" style="background:url(images/projects/kenko.jpg)" data-post="projects/kenko.html">
-        		<div class="itemOverlay">
-              <div style="margin: 0 auto; font-weight: 700; font-size: 4em; color: #fff; text-align: center; line-height:70px; position:relative; top:75px;">Meal Planner</div>
-            </div>
-      	  </div>
-      	</div>
-      </div>
-    </div>
-    <!-- End Projects Section -->
-
-
-    <!-- Start Blog Section -->
-    <div class="section-wrapper" style="background-color:#fff;">
-      <div id="blog" class="container">
-        <h2 style="text-align: center; margin-top: 50px;"><strong>Blog</strong></h2>
-        <div class="post-line">
-          <a href="posts/redlab.html">
-            Reflections of Being a Solutions Prototype Developer @ The RED Lab
-          </a>
         </div>
-
-        <div class="post-line">
-          <a href="posts/me.html">
-            Who Am I?
-          </a>
-        </div>
-      </div>
     </div>
-    <!-- End Blog Section -->
+
+	<div class="divider"></div>
+
+	<!-- Start Projects Section -->
+    <div class="container">
+        <div class="section" id="projects">
+            <div class="row">
+                <h3 class="header center">Projects</h3>
+				<!-- Desktop version -->
+
+                <div class="grid">
+                    <figure class="effect-ming center">
+                        <img src=
+                        "http://www.jayestrella.com/images/projects/kenko.jpg">
+
+                        <figcaption>
+                            <h2>Kenko</h2>
+
+                            <p>A tool to create affordable personalized meal plans</p><a href="https://medium.com/@jjestrel/kenko-a-personalized-meal-plan-b130f7963df8" target="_blank">LinkToProject</a>
+                        </figcaption>
+                    </figure>
+
+                    <div style="width: 4%; height:1px;"></div>
+
+                    <figure class="effect-ming center">
+                        <img src=
+                        "images/project-images/rallyx.png">
+
+                        <figcaption>
+                            <h2>Rally-X &nbsp; Bot</h2>
+
+                            <p>Attempt at reverse engineering Namco's Rally-X Game</p><a href="https://medium.com/@jjestrel/rally-x-reverse-engineering-656d8a4628df" target="_blank">LinkToProject</a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="effect-ming center">
+                        <img src=
+                        "images/project-images/sp500.jpg">
+
+                        <figcaption>
+                            <h2>S&P 500 Simulator</h2>
+
+                            <p>Simulating leveraged stock trading</p><a href="https://github.com/jjestrel/SPLeverageSim" target="_blank">LinkToProject</a>
+                        </figcaption>
+                    </figure>
+
+                    <figure class="effect-ming center">
+                        <img src=
+                        "images/project-images/tumblr-logo.png">
+
+                        <figcaption>
+                            <h2>FollowCheckr</h2>
+
+                            <p>Blog follower statistics for Tumblr</p><a href="https://github.com/jjestrel/FollowCheckr" target="_blank">LinkToProject</a>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- End Projects Section -->
+
+	<div class="divider"></div>
+
+	<!-- Skills Section -->
+    <div class="color-wrapper grey lighten-5" style="width:100%">
+        <div class="container" style="width:100%">
+            <div class="section" id="skills">
+                <h3 style="font-size: 4rem; text-align: center;">
+					Skills
+				</h3>
+				<ul class="collection with-header z-depth-2">
+					<li class="collection-header"><h4>Languages</h4></li>
+					<li class="collection-item">
+						<div id="language-skills" class="skills row">
+						</div>
+					</li>
+				 </ul>
+				 <br/>
+				<ul class="collection with-header z-depth-2">
+					<li class="collection-header"><h4>Frameworks</h4></li>
+					<li class="collection-item">
+						<div id="framework-skills" class="skills row">
+						</div>
+					</li>
+				 </ul>
+				 <br/>
+				<ul class="collection with-header z-depth-2">
+					<li class="collection-header"><h4>Technologies</h4></li>
+					<li class="collection-item">
+						<div id="technologies-skills" class="skills row">
+						</div>
+					</li>
+				 </ul>
+				 <br/>
+            </div>
+        </div>
+    </div>
+	<!-- End Skills Section -->
+
+	<div class="divider"></div>
+
+	<!-- Start References Section -->
+    <div class="color-wrapper" style="width:100%">
+        <div class="container" style="padding-bottom: 75px;">
+            <div class="section" id="references">
+                <h2 style="font-size: 4rem; text-align: center;">
+					<strong>What Do People Say?</strong>
+				</h2>
+
+                <!-- Sunit's Recommendation -->
+                <blockquote>
+                    Jay is very driven, self-motivated and understands the demands of a startup environment. We relied on Jay to overhaul our data infrastructure, and create a more robust architecture and he was able to deliver in a very impressive manner.
+					
+					<p style="font-style: italic; text-align: center">
+						- Sunit Mohindroo, Chief Product Officer at WatrHub
+					</p>
+                </blockquote>
+
+				<!-- Ali's recommendation -->
+                <blockquote>
+                    Jay is a technically talented individual with a
+                    impressively wide breadth of knowledge. He was instrumental
+                    in supporting his teammates in achieving their goals and
+                    excelled on his own as well. His skills and level-headed
+                    and well-informed perspective would be an asset to any
+                    team.
+
+					<p style="font-style: italic; text-align: center">
+						- Ali Tariq, Solutions Prototype Lead at Manulife RED Lab
+					</p>
+                </blockquote>
 
 
-  </div>
+                <!-- Andrew's Recommendation -->
+                <blockquote>
+                    Jay is an extremely intelligent, hardworking developer that
+                    knows what it takes to build production level software with
+                    proper design. He has the strange ability to maintain great
+                    practices and write scalable code. When you find someone
+                    who searches for innovative solutions and goes all the way
+                    home to implement it at the end of the day, you know that
+                    he's going to be a hit in the industry. I am definitely
+                    going to come to him next time I want to build another
+                    production level enterprise application in the future.
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+					<p style="font-style: italic; text-align: center">
+						- Andrew Andrade, Co-founder at PetroPredict
+					</p>
+                </blockquote>
+
+                <!-- Daniel's Recommendation -->
+                <blockquote>
+                    Jay is a capable programmer who can work well in groups or
+                    on his own to deliver production-ready code. He makes
+                    himself available as deadlines close in and he is very easy
+                    to work with.
+					<p style="font-style: italic; text-align: center">
+						- Daniel Bernhard, Principal at db 3rd Sector Consultancy
+					</p>
+                </blockquote>
+
+            </div>
+        </div>
+    </div>
+	<!-- End References Section -->
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/index.js"></script>
 </body>
-<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-<script src="js/main.js"></script>
 </html>
