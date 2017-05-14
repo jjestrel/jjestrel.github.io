@@ -5,88 +5,129 @@ var BOOKS = [
 	{
 		"title": "The Personal MBA",
 		"author": "Josh Kaufman",
-		"cover": "images/book-covers/the-personal-mba-cover.jpg"
+		"cover": "the-personal-mba-cover.jpg"
 	},
 	{
 		"title": "Stuff Matters",
 		"author": "Mark Miodownik",
-		"cover": "images/book-covers/stuff-matters-cover.jpg"
+		"cover": "stuff-matters-cover.jpg"
 	},
 	{
 		"title": "A Random Walk Down Wall Street",
 		"author": "Burton Malkiel",
-		"cover": "images/book-covers/a-random-walk-cover.jpg"
+		"cover": "a-random-walk-cover.jpg"
 	},
 	{
 		"title": "Change by Design",
 		"author": "Tim Brown",
-		"cover": "images/book-covers/change-by-design-cover.jpg"
+		"cover": "change-by-design-cover.jpg"
 	},
 	{
 		"title": "Adventures of an IT Leader",
 		"author": "Robert D. Austin, Richard L. Nolan, Shannon O'Donnell",
-		"cover": "images/book-covers/adventures-of-an-it-leader-cover.jpg"
+		"cover": "adventures-of-an-it-leader-cover.jpg"
 	},
 	{
 		"title": "How to Win Friends and Influence People",
 		"author": "Dale Carnegie",
-		"cover": "images/book-covers/how-to-win-friends-cover.jpg"
+		"cover": "how-to-win-friends-cover.jpg"
 	},
 	{
 		"title": "The Little Book of Behavioural Investing",
 		"author": "James Montier",
-		"cover": "images/book-covers/behavioural-investing-cover.jpg"
+		"cover": "behavioural-investing-cover.jpg"
 	},
 	{
 		"title": "Data Science for Business",
 		"author": "Foster Provost, Tom Fawcett",
-		"cover": "images/book-covers/data-science-for-business-cover.jpg"
+		"cover": "data-science-for-business-cover.jpg"
 	},
 	{
 		"title": "Business Adventures",
 		"author": "John Brooks",
-		"cover": "images/book-covers/business-adventures-cover.jpg"
+		"cover": "business-adventures-cover.jpg"
 	},
 	{
 		"title": "The Little Book of Common Sense Investing",
 		"author": "John Bogle",
-		"cover": "images/book-covers/common-sense-investing-cover.jpg"
+		"cover": "common-sense-investing-cover.jpg"
 	},
 	{
 		"title": "A Short Book About Art",
 		"author": "Dana Arnold",
-		"cover": "images/book-covers/a-short-book-about-art-cover.jpg"
+		"cover": "a-short-book-about-art-cover.jpg"
 	},
 	{
 		"title": "What Are You Looking At?: 150 Years of Modern Art in a Nutshell",
 		"author": "Will Gompertz",
-		"cover": "images/book-covers/150-years-of-modern-art-cover.jpg"
+		"cover": "150-years-of-modern-art-cover.jpg"
 	},
 	{
 		"title": "Rework",
 		"author": "Jason Fried, David Heinemeier Hansson",
-		"cover": "images/book-covers/rework-cover.jpg"
+		"cover": "rework-cover.jpg"
 	},
 	{
 		"title": "The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success",
 		"author": "William N. Thorndike Jr.",
-		"cover": "images/book-covers/the-outsiders-cover.jpg"
-	}
-	/*
+		"cover": "the-outsiders-cover.jpg"
+	},
 	{
-		"title": "",
-		"author": "",
-		"cover": "images/book-covers/"
+		"title": "Shoe Dog",
+		"author": "Phil Knight",
+		"cover": "shoe-dog-cover.jpg"
+	},
+	{
+		"title": "On Writing: A Memoir of the Craft",
+		"author": "Stephen King",
+		"cover": "on-writing-cover.jpg"
+	},
+	{
+		"title": "Mistakes Were Made (But Not by Me): Why We Justify Foolish Beliefs, Bad Decisions, and Hurtful Acts",
+		"author": "Carol Tavris, Elliot Aronson",
+		"cover": "mistakes-were-made-cover.jpg"
+	},
+	{
+		"title": "The $100 Startup: Reinvent the Way You Make a Living, Do What You Love, and Create a New Future",
+		"author": "Chris Guillebeau ",
+		"cover": "100-startup-cover.jpg"
+	},
+	{
+		"title": "Anything You Want: 40 Lessons for a New Kind of Entrepreneur",
+		"author": "Derek Sivers",
+		"cover": "anything-you-want-cover.jpg"
+	},
+	{
+		"title": "Managing Humans: Biting and Humorous Tales of a Software Engineering Manager",
+		"author": "Michael Lopp",
+		"cover": "managing-humans-cover.jpg"
+	},
+	{
+		"title": "Ego Is the Enemy",
+		"author": "Ryan Holiday",
+		"cover": "ego-is-the-enemy-cover.jpg"
+	},
+	{
+		"title": "Leaders Eat Last: Why Some Teams Pull Together and Others Don't",
+		"author": "Simon Sinek",
+		"cover": "leaders-eat-last-cover.jpg"
+	},
+	{
+		"title": "Harder Than I Thought: Adventures of a Twenty-First Century Leader",
+		"author": "Robert D. Austin, Richard L. Nolan, Shannon O'Donnell",
+		"cover": "harder-than-i-thought-cover.jpg"
 	}
-	*/
 ];
 
 (function($){
   $(function() {
+	function getImage(name) {
+		return 'images/book-covers/' + name;
+	}
 	var getBookHTML = function(title, author, image) {
 		var html ='<div class="col s6 m5 l3">' +
 					'<div class="book center-align">' +
-						'<img class="lazy" data-src="'+ image + '"></img>' +
+						'<img class="lazy" data-src="'+ getImage(image) + '"></img>' +
 						'<p class="center"><strong>' + title + '</strong><br/>'+ author + '</p>' +
 					'</div>' +
 				'</div>';
@@ -101,7 +142,7 @@ var BOOKS = [
 
 		$('#books-list').append(html);
 	}
-	
+
 	// Start lazy loading - we must do this at the end
 	$('.lazy').lazy();
 
